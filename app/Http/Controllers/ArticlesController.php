@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Article;
 
 class ArticlesController extends Controller
 {
@@ -15,6 +16,6 @@ class ArticlesController extends Controller
     }
 
     public function showAllArticles(){
-        dd('test');
+        return response()->json(Article::all());
     }
 }

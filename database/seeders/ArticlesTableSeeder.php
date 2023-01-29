@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Article;
 
-class DatabaseSeeder extends Seeder
+class ArticlesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
-        // \App\Models\Article::factory(200)->create();
+        // factory(Article::class, 20)->create();
     }
 }
