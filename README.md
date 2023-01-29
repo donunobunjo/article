@@ -6,4 +6,8 @@
 
 •	php artisan db:seed
 
-•	php -S localhost:8000 -t public
+•	php artisan swagger-lume:publish
+
+•	php artisan swagger-lume:generate
+
+•	php -S localhost:8000 public/index.php (In other not to get a blank documentation page)
