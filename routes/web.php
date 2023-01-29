@@ -17,10 +17,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix'=>'api'],function($router){
+// $router->group(['prefix'=>'api'],function($router){
     $router->get('articles','ArticlesController@showAllArticles');
-    $router->get('articles/{id}', ['uses' => 'articlesController@showOnearticles']);
-    $router->get('articles/{id}/comments', ['uses' => 'articlesController@showOnearticles']);
-    $router->get('articles/{id}/like', ['uses' => 'articlesController@showOnearticles']);
-    $router->get('articles/{id}/view', ['uses' => 'articlesController@showOnearticles']);
-});
+    $router->get('articles/{id}', ['uses' => 'articlesController@showOneArticle']);
+    $router->get('articles/{id}/comments', ['uses' => 'articlesController@showArticleComments']);
+    $router->get('articles/{id}/like', ['uses' => 'articlesController@showArticleLikes']);
+    $router->get('articles/{id}/view', ['uses' => 'articlesController@showArticleViews']);
+// });
